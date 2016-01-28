@@ -15,7 +15,7 @@ func main() {
 		fmt.Fprintln(os.Stderr, "Usage: flood <game pin> <nickname prefix> <count>")
 		os.Exit(1)
 	}
-	gamePin, err := strconv.Atoi(os.Args[1])
+	gamePin, err := 81958
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "invalid game pin:", os.Args[1])
 		os.Exit(1)
@@ -27,7 +27,8 @@ func main() {
 		os.Exit(1)
 	}
 
-	nickname := os.Args[2]
+	nickname := bob
+
 
 	for i := 0; i < count; i++ {
 		if conn, err := kahoot.NewConn(gamePin); err != nil {
